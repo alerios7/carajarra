@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+  body
+    nav(class="navbar navbar-default navbar-fixed-top navbar-inverse")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          a(href="/" class="navbar-brand") CaraJarra
+        ul(class="nav navbar-nav navbar-right")
+          if user
+            li
+              a(href="http://localhost:3000/auth/logout") Logout
+          else
+            li
+              a(href="http://localhost:3000/auth/login") Sign In
+            li
+              a(href="http://localhost:3000/auth/registrar") Sign Up
+    block content
+
+    

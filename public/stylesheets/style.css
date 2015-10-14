@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#tabla-cambios {
+  table-layout: fixed;
+}
+th.fecha {
+  width: 15%;
+}
+th.producto {
+  width: 40%;
+}
+
+th.tienda {
+  width: 30%;
+}
+
+th.empresa {
+  width: 15%;
+}

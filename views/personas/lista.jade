@@ -1,0 +1,13 @@
+extends ../layout
+block content
+  div.personas
+    if personas.length > 0
+      each persona in personas
+        div.persona
+          h2 #{persona.nombre}
+          p
+            a(href="/personas/#{persona._id}") Ver Persona
+          hr
+          br
+    else
+      h1 No hay personas

@@ -1,0 +1,26 @@
+extends ../layout
+block content
+    div.personas
+      div.persona
+        div(class="row")
+          div(class="col-md-8 col-md-offset-2")
+            form(method="POST")
+              h1 Nuevo Carajarra
+              if err
+                ul
+                each e in err.errors
+                  li #{e.message}
+                
+              div(class="form-group")
+                input(type="text" name="rut" placeholder="RUT" class="form-control")
+              div(class="form-group")
+                input(type="text" name="nombre" placeholder="Nombre" class="form-control")
+              div(class="form-group")
+                input(type="text" name="apellido" placeholder="Apellido" class="form-control")
+              div(class="form-group")
+                input(type="text" name="company" value="#{userComplete.company}" class="form-control")
+              div(class="form-group")
+                input(type="text" name="store" value="#{userComplete.store}" class="form-control")
+              div(class="form-group")
+                input(type="text" name="product" placeholder="Producto" class="form-control")
+              button(type="submit" class="btn btn-primary") Crear persona
